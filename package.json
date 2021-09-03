@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a npm that asks for a simple number place with 4 rows and 4 columns.",
   "main": "index.js",
+  "bin": {
+    "simple_number_place": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
