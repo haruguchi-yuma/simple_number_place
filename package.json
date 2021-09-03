@@ -1,0 +1,29 @@
+{
+  "name": "simple_number_place",
+  "version": "1.0.0",
+  "description": "This is a npm that asks for a simple number place with 4 rows and 4 columns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haruguchi-yuma/simple_number_place.git"
+  },
+  "keywords": [
+    "number-place",
+    "math-puzzle"
+  ],
+  "author": "Haruguchi Yuma <ikeoku.y@gmail.com> (https://github.com/haruguchi-yuma)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haruguchi-yuma/simple_number_place/issues"
+  },
+  "homepage": "https://github.com/haruguchi-yuma/simple_number_place#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "dependencies": {
+    "enquirer": "^2.3.6"
+  }
+}
