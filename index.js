@@ -106,7 +106,7 @@ const formateYourAnswer = (yourAnswers) => {
   const obj = {}
   yourAnswers.forEach((answer, i) => {
     if (isNaN(answer)) {
-      obj[alphabets[i]] = '不正な解答'
+      obj[alphabets[i]] = 'Incorrect answer.'
     } else {
       obj[alphabets[i]] = answer
     }
@@ -116,7 +116,7 @@ const formateYourAnswer = (yourAnswers) => {
 
 async function main () {
   const { Form } = require('enquirer')
-  console.log('<問題>\n')
+  console.log('<Problem>\n')
   printNumberPlace(problem)
   const listArray = [
     { name: 'A', message: 'A' },
@@ -131,7 +131,7 @@ async function main () {
 
   const prompt = new Form({
     name: 'answer',
-    message: 'A~Hのそれぞれに当てはまる数を入力してください。',
+    message: 'Please enter the number that applies to each of A~H.',
     choices: listArray
   })
   await prompt
@@ -140,23 +140,23 @@ async function main () {
       const yourAnswers = listArray.map(obj => parseFloat(obj.value))
       if (yourAnswers.some(num => isNaN(num) || num <= 0 || num >= 5 || !Number.isInteger(num))) {
         console.log('---------------------------------------------------')
-        console.log('入力値が正しくありません。')
-        console.log('もう一度頑張りましょう')
+        console.log('Input value is not correct.')
+        console.log("Let's try again.")
         main()
         return
       }
       const results = checkCorrectAnswer(answer, blankIndexs, yourAnswers)
       if (results) {
         console.log('---------------------------------------------------')
-        console.log('大正解!!')
-        console.log('あなたの答え', formateYourAnswer(yourAnswers))
-        console.log('<解答例>\n')
+        console.log("You're right!")
+        console.log('Your answer is', formateYourAnswer(yourAnswers))
+        console.log('<Answer example>\n')
         printNumberPlace(answer)
       } else {
         console.log('---------------------------------------------------')
-        console.log('残念!!間違っています!')
-        console.log('あなたの答え', formateYourAnswer(yourAnswers))
-        console.log('もう一度頑張りましょう！')
+        console.log('Sorry! Your answer is wrong!')
+        console.log('Your answer is', formateYourAnswer(yourAnswers))
+        console.log("Let's try again.")
         main()
       }
     }).catch(console.error)
