@@ -23,7 +23,7 @@ $ simple_number_place
     F | 1 | G | H
 
 
-? A~Hのそれぞれに当てはまる数を入力してください。  
+? Please enter the number that applies to each of A~H.
 ⊙  A :  
 ⊙  B : …
 ⊙  C : …
