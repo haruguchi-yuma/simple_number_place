@@ -12,7 +12,7 @@ This is a npm that asks for a simple number place with 4 rows and 4 columns.
 Enter a number from 1 to 4 in the alphabet.
 ```bash
 $ simple_number_place
-<問題>
+<Problem>
 
     4 | 3 | 2 | A
    ---|---|---|---
