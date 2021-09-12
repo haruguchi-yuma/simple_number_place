@@ -1,6 +1,6 @@
 {
   "name": "simple_number_place",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a npm that asks for a simple number place with 4 rows and 4 columns.",
   "main": "index.js",
   "bin": {
